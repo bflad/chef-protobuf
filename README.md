@@ -27,7 +27,7 @@ These attributes are under the `node['protobuf']` namespace.
 
 Attribute | Description | Type | Default
 ----------|-------------|------|--------
-install_type | Installation type for protobuf ("package" or "source") | String | "package"
+install_type | Installation type for protobuf ("archive" or "package") | String | "package"
 
 ### Archive Attributes
 
