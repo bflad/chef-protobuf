@@ -74,25 +74,17 @@ Defaults to installing all packages and handling apt/yum::epel dependencies.
 
 ### All Packages Installation
 
-The default for this cookbook. Handles apt/yum::epel dependencies for you.
-
 * Add `recipe['protobuf::package']` to your node's run list
 
 ### C++ Package Installation Only
-
-Don't forget to handle any necessary apt/yum::epel dependencies.
 
 * Add `recipe['protobuf::package_cpp']` to your node's run list
 
 ### Java Package Installation Only
 
-Don't forget to handle any necessary apt/yum::epel dependencies.
-
 * Add `recipe['protobuf::package_java']` to your node's run list
 
 ### Python Package Installation Only
-
-Don't forget to handle any necessary apt/yum::epel dependencies.
 
 * Add `recipe['protobuf::package_python']` to your node's run list
 
