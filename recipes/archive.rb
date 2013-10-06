@@ -18,7 +18,7 @@ execute "Installing protobuf #{node['protobuf']['archive']['version']} archive" 
   command "./configure --prefix=#{node['protobuf']['archive']['install_dir']} && make && make check && make install"
   creates "#{node['protobuf']['archive']['install_dir']}/bin/protoc"
   action :run
-  notifies :run, "execute[ldconfig]"
+  notifies :run, "execute[ldconfig]", :immediately
 end
 
 execute "ldconfig" do

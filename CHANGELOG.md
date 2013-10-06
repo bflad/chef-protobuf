@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Notify ldconfig immediately on archive install
+
 ## 0.1.1
 
 * Move apt/yum::epel dependency handling to each package recipe
