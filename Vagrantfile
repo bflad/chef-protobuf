@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = %w{
-      recipe[protobuf::archive]
+      recipe[protobuf]
     }
   end
 end
