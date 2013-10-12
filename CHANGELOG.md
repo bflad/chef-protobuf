@@ -1,3 +1,8 @@
+## 0.2.0
+
+* Recipes for correctly installing (via archive or package) C++, Java, or Python per platform, platform_version, and if `node['protobuf']['install_type']` is "archive"
+* Remove package recipe (split recipes do better job)
+
 ## 0.1.2
 
 * Notify ldconfig immediately on archive install

@@ -1,1 +1,3 @@
-include_recipe "protobuf::#{node['protobuf']['install_type']}"
+include_recipe "protobuf::cpp"
+include_recipe "protobuf::java"
+include_recipe "protobuf::python"
