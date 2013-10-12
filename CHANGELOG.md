@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Use `node['protobuf']['install_type']` to override auto-detection (defaults to nil -- auto-detection)
+
 ## 0.2.0
 
 * Recipes for correctly installing (via archive or package) C++, Java, or Python per platform, platform_version, and if `node['protobuf']['install_type']` is "archive"

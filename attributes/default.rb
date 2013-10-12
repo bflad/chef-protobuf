@@ -1,4 +1,4 @@
-default['protobuf']['install_type'] = "package"
+default['protobuf']['install_type'] = nil
 
 # Source attributes
 default['protobuf']['archive']['install_dir'] = "/usr/local"

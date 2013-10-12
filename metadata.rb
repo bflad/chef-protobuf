@@ -4,7 +4,7 @@ maintainer_email  "bflad417@gmail.com"
 license           "Apache 2.0"
 description       "Installs/Configures Protocol Buffer"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "0.2.0"
+version           "1.0.0"
 recipe            "protobuf", "Installs Protocol Buffer"
 recipe            "protobuf::archive", "Installs protobuf via archive"
 recipe            "protobuf::cpp", "Installs protobuf C++"

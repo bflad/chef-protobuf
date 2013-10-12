@@ -27,7 +27,7 @@ These attributes are under the `node['protobuf']` namespace.
 
 Attribute | Description | Type | Default
 ----------|-------------|------|--------
-install_type | Installation type for protobuf default recipe ("archive" or "package") | String | "package"
+install_type | Override platform and version auto-detection for installation ("archive" or "package") | String | nil (auto-detect)
 
 ### Archive Attributes
 
@@ -69,28 +69,28 @@ Installs protobuf C++, Java, and Python. Recommended to use `cpp`, `java`, and `
 
 * Add `recipe[protobuf]` to your node's run list
 
-### Archive Installation
-
-* If necessary, set `node['protobuf']['archive']['version']` and `node['protobuf']['archive']['checksum']`
-* Set `node['protobuf']['install_type']` to "archive" or add `recipe['protobuf::archive']` to your node's run list
-
 ### C++ Installation Only
 
-Installs protobuf C++ via archive or package depending on platform and version auto-detection or if `node['protobuf']['install_type']` is "archive".
+Installs protobuf C++ via archive or package depending on platform and version auto-detection or `node['protobuf']['install_type']` if set.
 
 * Add `recipe['protobuf::cpp']` to your node's run list
 
 ### Java Installation Only
 
-Installs protobuf Java via archive or package depending on platform and version auto-detection or if `node['protobuf']['install_type']` is "archive".
+Installs protobuf Java via archive or package depending on platform and version auto-detection or `node['protobuf']['install_type']` if set.
 
 * Add `recipe['protobuf::java']` to your node's run list
 
 ### Python Installation Only
 
-Installs protobuf Python via archive or package depending on platform and version auto-detection or if `node['protobuf']['install_type']` is "archive".
+Installs protobuf Python via archive or package depending on platform and version auto-detection or `node['protobuf']['install_type']` if set.
 
 * Add `recipe['protobuf::python']` to your node's run list
+
+### Archive Installation
+
+* If necessary, set `node['protobuf']['archive']['version']` and `node['protobuf']['archive']['checksum']`
+* Set `node['protobuf']['install_type']` to "archive" or add `recipe['protobuf::archive']` to your node's run list
 
 ### C++ Package Installation Only
 
