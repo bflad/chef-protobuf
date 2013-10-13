@@ -5,7 +5,7 @@ module Helpers
     include MiniTest::Chef::Resources
 
     def protobuf_packages_cpp
-      case node['plaform']
+      case node['platform']
       when "centos", "fedora", "redhat"
         %w{protobuf protobuf-devel protobuf-compiler}
       when "ubuntu"
@@ -14,7 +14,7 @@ module Helpers
     end
 
     def protobuf_packages_java
-      case node['plaform']
+      case node['platform']
       when "centos", "fedora", "redhat"
         %w{protobuf-compiler}
       when "ubuntu"
@@ -23,7 +23,7 @@ module Helpers
     end
 
     def protobuf_packages_python
-      case node['plaform']
+      case node['platform']
       when "centos", "fedora", "redhat"
         %w{protobuf-python protobuf-compiler}
       when "ubuntu"
