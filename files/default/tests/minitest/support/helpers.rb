@@ -5,36 +5,30 @@ module Helpers
     include MiniTest::Chef::Resources
 
     def protobuf_packages_cpp
-      value_for_platform(
-        %w{centos fedora redhat} => {
-          "default" => %w{protobuf protobuf-devel protobuf-compiler}
-        },
-        %w{ubuntu} => {
-          "default" => %w{libprotobuf7 libprotobuf-dev protobuf-compiler}
-        }
-      )
+      case node['plaform']
+      when "centos", "fedora", "redhat"
+        %w{protobuf protobuf-devel protobuf-compiler}
+      when "ubuntu"
+        %w{libprotobuf7 libprotobuf-dev protobuf-compiler}
+      end
     end
 
     def protobuf_packages_java
-      value_for_platform(
-        %w{centos fedora redhat} => {
-          "default" => %w{protobuf-compiler}
-        },
-        %w{ubuntu} => {
-          "default" => %w{libprotobuf-java protobuf-compiler}
-        }
-      )
+      case node['plaform']
+      when "centos", "fedora", "redhat"
+        %w{protobuf-compiler}
+      when "ubuntu"
+        %w{libprotobuf-java protobuf-compiler}
+      end
     end
 
     def protobuf_packages_python
-      value_for_platform(
-        %w{centos fedora redhat} => {
-          "default" => %w{protobuf-python protobuf-compiler}
-        },
-        %w{ubuntu} => {
-          "default" => %w{python-protobuf protobuf-compiler}
-        }
-      )
+      case node['plaform']
+      when "centos", "fedora", "redhat"
+        %w{protobuf-python protobuf-compiler}
+      when "ubuntu"
+        %w{python-protobuf protobuf-compiler}
+      end
     end
   end
 end
