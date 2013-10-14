@@ -1,3 +1,7 @@
+## 1.0.1
+
+* minitest fixes
+
 ## 1.0.0
 
 * Use `node['protobuf']['install_type']` to override auto-detection (defaults to nil -- auto-detection)
