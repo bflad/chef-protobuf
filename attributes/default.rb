@@ -4,9 +4,10 @@ default['protobuf']['install_type'] = nil
 default['protobuf']['archive']['install_dir'] = '/usr/local'
 default['protobuf']['archive']['version'] = '2.5.0'
 default['protobuf']['archive']['url'] = "https://protobuf.googlecode.com/files/protobuf-#{node['protobuf']['archive']['version']}.tar.bz2"
-default['protobuf']['archive']['checksum'] = case node['protobuf']['archive']['version']
-when '2.5.0' then '13bfc5ae543cf3aa180ac2485c0bc89495e3ae711fc6fab4f8ffe90dfb4bb677'
-end
+default['protobuf']['archive']['checksum'] =
+  case node['protobuf']['archive']['version']
+  when '2.5.0' then '13bfc5ae543cf3aa180ac2485c0bc89495e3ae711fc6fab4f8ffe90dfb4bb677'
+  end
 
 # Package attributes
 default['protobuf']['package']['cpp_packages'] = value_for_platform(

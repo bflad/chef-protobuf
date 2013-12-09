@@ -1,4 +1,6 @@
+# Helpers module
 module Helpers
+  # Helpers::Protobuf module
   module Protobuf
     include MiniTest::Chef::Assertions
     include MiniTest::Chef::Context
