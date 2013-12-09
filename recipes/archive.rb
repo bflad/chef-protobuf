@@ -1,9 +1,9 @@
-include_recipe "build-essential"
+include_recipe 'build-essential'
 
 remote_file "#{Chef::Config[:file_cache_path]}/protobuf-#{node['protobuf']['archive']['version']}.tar.bz2" do
   source    node['protobuf']['archive']['url']
   checksum  node['protobuf']['archive']['checksum']
-  mode      "0644"
+  mode      '0644'
   action    :create_if_missing
 end
 
@@ -18,10 +18,10 @@ execute "Installing protobuf #{node['protobuf']['archive']['version']} archive" 
   command "./configure --prefix=#{node['protobuf']['archive']['install_dir']} && make && make check && make install"
   creates "#{node['protobuf']['archive']['install_dir']}/bin/protoc"
   action :run
-  notifies :run, "execute[ldconfig]", :immediately
+  notifies :run, 'execute[ldconfig]', :immediately
 end
 
-execute "ldconfig" do
-  command "ldconfig"
+execute 'ldconfig' do
+  command 'ldconfig'
   action :nothing
 end
