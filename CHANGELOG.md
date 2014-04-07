@@ -1,6 +1,6 @@
 ## 1.1.0
 
-* Migrating from yum::epel to new yum-epel cookbook
+* [#1][]: Migrating from yum::epel to new yum-epel cookbook
 
 ## 1.0.1
 
@@ -26,3 +26,5 @@
 ## 0.1.0
 
 * Initial release
+
+[#1]: https://github.com/bflad/chef-protobuf/issues/1
