@@ -1,7 +1,6 @@
-## 1.0.1
+## 1.1.0
 
-* migrating from yum::epel to new yum-epel cookbook
-
+* Migrating from yum::epel to new yum-epel cookbook
 
 ## 1.0.1
 
