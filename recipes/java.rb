@@ -5,13 +5,13 @@ when 'package'
   include_recipe 'protobuf::package_java'
 else
   protobuf_recipe = value_for_platform(
-    %w{centos redhat} => {
+    %w(centos redhat) => {
       'default' => 'archive'
     },
-    %w{fedora} => {
+    %w(fedora) => {
       'default' => 'package_java'
     },
-    %w{ubuntu} => {
+    %w(ubuntu) => {
       'default' => 'package_java'
     }
   )

@@ -1,10 +1,10 @@
 include_recipe 'build-essential'
 
 remote_file "#{Chef::Config[:file_cache_path]}/protobuf-#{node['protobuf']['archive']['version']}.tar.bz2" do
-  source    node['protobuf']['archive']['url']
-  checksum  node['protobuf']['archive']['checksum']
-  mode      '0644'
-  action    :create_if_missing
+  source node['protobuf']['archive']['url']
+  checksum node['protobuf']['archive']['checksum']
+  mode '0644'
+  action :create_if_missing
 end
 
 execute "Extracting protobuf #{node['protobuf']['archive']['version']}" do

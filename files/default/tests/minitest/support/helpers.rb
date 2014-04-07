@@ -9,27 +9,27 @@ module Helpers
     def protobuf_packages_cpp
       case node['platform']
       when 'centos', 'fedora', 'redhat'
-        %w{protobuf protobuf-devel protobuf-compiler}
+        %w(protobuf protobuf-devel protobuf-compiler)
       when 'ubuntu'
-        %w{libprotobuf7 libprotobuf-dev protobuf-compiler}
+        %w(libprotobuf7 libprotobuf-dev protobuf-compiler)
       end
     end
 
     def protobuf_packages_java
       case node['platform']
       when 'centos', 'fedora', 'redhat'
-        %w{protobuf-compiler}
+        %w(protobuf-compiler)
       when 'ubuntu'
-        %w{libprotobuf-java protobuf-compiler}
+        %w(libprotobuf-java protobuf-compiler)
       end
     end
 
     def protobuf_packages_python
       case node['platform']
       when 'centos', 'fedora', 'redhat'
-        %w{protobuf-python protobuf-compiler}
+        %w(protobuf-python protobuf-compiler)
       when 'ubuntu'
-        %w{python-protobuf protobuf-compiler}
+        %w(python-protobuf protobuf-compiler)
       end
     end
   end

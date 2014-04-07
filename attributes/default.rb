@@ -11,26 +11,26 @@ default['protobuf']['archive']['checksum'] =
 
 # Package attributes
 default['protobuf']['package']['cpp_packages'] = value_for_platform(
-  %w{centos fedora redhat} => {
-    'default' => %w{protobuf protobuf-devel protobuf-compiler}
+  %w(centos fedora redhat) => {
+    'default' => %w(protobuf protobuf-devel protobuf-compiler)
   },
-  %w{ubuntu} => {
-    'default' => %w{libprotobuf7 libprotobuf-dev protobuf-compiler}
+  %w(ubuntu) => {
+    'default' => %w(libprotobuf7 libprotobuf-dev protobuf-compiler)
   }
 )
 default['protobuf']['package']['java_packages'] = value_for_platform(
-  %w{centos fedora redhat} => {
-    'default' => %w{protobuf-compiler}
+  %w(centos fedora redhat) => {
+    'default' => %w(protobuf-compiler)
   },
-  %w{ubuntu} => {
-    'default' => %w{libprotobuf-java protobuf-compiler}
+  %w(ubuntu) => {
+    'default' => %w(libprotobuf-java protobuf-compiler)
   }
 )
 default['protobuf']['package']['python_packages'] = value_for_platform(
-  %w{centos fedora redhat} => {
-    'default' => %w{protobuf-python protobuf-compiler}
+  %w(centos fedora redhat) => {
+    'default' => %w(protobuf-python protobuf-compiler)
   },
-  %w{ubuntu} => {
-    'default' => %w{python-protobuf protobuf-compiler}
+  %w(ubuntu) => {
+    'default' => %w(python-protobuf protobuf-compiler)
   }
 )

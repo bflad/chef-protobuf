@@ -5,10 +5,10 @@ when 'package'
   include_recipe 'protobuf::package_cpp'
 else
   protobuf_recipe = value_for_platform(
-    %w{centos fedora redhat} => {
+    %w(centos fedora redhat) => {
       'default' => 'package_cpp'
     },
-    %w{ubuntu} => {
+    %w(ubuntu) => {
       'default' => 'package_cpp'
     }
   )
