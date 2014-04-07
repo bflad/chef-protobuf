@@ -1,5 +1,10 @@
 ## 1.0.1
 
+* migrating from yum::epel to new yum-epel cookbook
+
+
+## 1.0.1
+
 * minitest fixes
 
 ## 1.0.0

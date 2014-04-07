@@ -4,7 +4,7 @@ maintainer_email  'bflad417@gmail.com'
 license           'Apache 2.0'
 description       'Installs/Configures Protocol Buffer'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           '1.0.1'
+version           '1.0.2'
 recipe            'protobuf', 'Installs Protocol Buffer'
 recipe            'protobuf::archive', 'Installs protobuf via archive'
 recipe            'protobuf::cpp', 'Installs protobuf C++'
@@ -18,6 +18,6 @@ recipe            'protobuf::python', 'Installs protobuf Python'
   supports os
 end
 
-%w{ apt build-essential yum }.each do |cb|
+%w{ apt build-essential yum yum-epel }.each do |cb|
   depends cb
 end
