@@ -20,6 +20,7 @@ Installs [Protocol Buffer](https://code.google.com/p/protobuf/) C++, Java, and P
 * [apt](https://github.com/opscode-cookbooks/apt)
 * [build-essential](https://github.com/opscode-cookbooks/build-essential)
 * [yum](https://github.com/opscode-cookbooks/yum)
+* [yum-epel](https://github.com/opscode-cookbooks/yum-epel)
 
 ## Attributes
 
