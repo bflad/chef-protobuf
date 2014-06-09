@@ -15,7 +15,8 @@ default['protobuf']['package']['cpp_packages'] = value_for_platform(
     'default' => %w(protobuf protobuf-devel protobuf-compiler)
   },
   %w(ubuntu) => {
-    'default' => %w(libprotobuf7 libprotobuf-dev protobuf-compiler)
+    %w(12.04 12.10 13.04 13.10) => %w(libprotobuf7 libprotobuf-dev protobuf-compiler),
+    'default' => %w(libprotobuf8 libprotobuf-dev protobuf-compiler)
   }
 )
 default['protobuf']['package']['java_packages'] = value_for_platform(

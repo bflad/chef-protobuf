@@ -11,7 +11,8 @@ module Helpers
       when 'centos', 'fedora', 'redhat'
         %w(protobuf protobuf-devel protobuf-compiler)
       when 'ubuntu'
-        %w(libprotobuf7 libprotobuf-dev protobuf-compiler)
+        return %w(libprotobuf7 libprotobuf-dev protobuf-compiler) if %w(12.04 12.10 13.04 13.10).include?(node['platform_version'])
+        %w(libprotobuf8 libprotobuf-dev protobuf-compiler)
       end
     end
 

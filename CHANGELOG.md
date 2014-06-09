@@ -1,3 +1,7 @@
+## 1.2.0
+
+* Enhancement: Support Ubuntu 14.04+ C++ packages
+
 ## 1.1.0
 
 * [#1][]: Migrating from yum::epel to new yum-epel cookbook
